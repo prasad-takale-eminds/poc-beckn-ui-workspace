@@ -9,7 +9,8 @@ pipeline {
     stage('Build') {
       steps {
         sh '''
-        git checkout "${GIT_BRANCH}"
+        echo "Test message"
+	git checkout "${GIT_BRANCH}"
         rm package-lock.json
         CI=false yarn
         CI=false yarn build:dsep
