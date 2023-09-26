@@ -9,7 +9,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''
-        echo "Test message"
+        echo "Test message added"
 	git checkout "${GIT_BRANCH}"
         rm package-lock.json
         CI=false yarn
